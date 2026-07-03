@@ -1,0 +1,87 @@
+{
+  "slug": "plugin-messenger",
+  "packageName": "@phantasy/plugin-messenger",
+  "displayName": "Messenger",
+  "description": "Facebook Messenger integration plugin for Phantasy companions.",
+  "workspace": "business",
+  "extensionKind": "integration",
+  "category": "messaging",
+  "tags": [
+    "messenger",
+    "facebook",
+    "meta",
+    "messaging"
+  ],
+  "permissions": [
+    "internet"
+  ],
+  "dependencies": [],
+  "visibility": "public",
+  "repoUrl": "https://github.com/phantasy-bot/plugin-messenger",
+  "sourceOfTruth": "monorepo",
+  "sourceOwner": "monorepo",
+  "sourcePayload": "source-extract",
+  "syncMode": "source-extract",
+  "phase": "source-extracted",
+  "sourceExtract": {
+    "packageDependencies": {
+      "@chat-adapter/messenger": "^4.32.0"
+    },
+    "files": [
+      {
+        "sourcePath": "src/first-party-plugins/plugin-messenger/index.ts",
+        "targetPath": "src/index.ts"
+      },
+      {
+        "sourcePath": "src/first-party-plugins/plugin-messenger/messenger-plugin.ts",
+        "targetPath": "src/messenger-plugin.ts"
+      }
+    ]
+  },
+  "repoExists": true,
+  "npmPublished": false,
+  "runtimeLoadMode": "git",
+  "monorepoPackageStatus": "removed",
+  "phantasy": {
+    "displayName": "Messenger",
+    "category": "messaging",
+    "tags": [
+      "messenger",
+      "facebook",
+      "meta",
+      "messaging"
+    ],
+    "workspace": "business",
+    "extensionKind": "integration",
+    "permissions": [
+      "internet"
+    ],
+    "pluginDependencies": [],
+    "platforms": [
+      "node"
+    ],
+    "productionReady": false,
+    "adminSurface": {
+      "tabId": "messenger",
+      "label": "Messenger",
+      "workspace": "business",
+      "kind": "generic",
+      "keywords": [
+        "messenger",
+        "facebook",
+        "meta",
+        "messaging"
+      ]
+    },
+    "configSchema": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  },
+  "exportedAt": "2026-07-03T03:20:02.627Z"
+}

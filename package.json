@@ -1,0 +1,100 @@
+{
+  "name": "@phantasy/plugin-messenger",
+  "version": "0.1.0-beta",
+  "private": false,
+  "description": "Facebook Messenger integration plugin for Phantasy companions.",
+  "license": "FSL-1.1-Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "phantasy.plugin.json"
+  ],
+  "sideEffects": false,
+  "keywords": [
+    "messenger",
+    "facebook",
+    "meta",
+    "messaging"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phantasy-bot/plugin-messenger"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/phantasy-bot/plugin-messenger",
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@phantasy/agent": "^0.1.0-beta"
+  },
+  "peerDependenciesMeta": {
+    "@phantasy/agent": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@chat-adapter/messenger": "^4.32.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.9.2"
+  },
+  "phantasy": {
+    "displayName": "Messenger",
+    "category": "messaging",
+    "tags": [
+      "messenger",
+      "facebook",
+      "meta",
+      "messaging"
+    ],
+    "workspace": "business",
+    "extensionKind": "integration",
+    "permissions": [
+      "internet"
+    ],
+    "pluginDependencies": [],
+    "platforms": [
+      "node"
+    ],
+    "productionReady": false,
+    "adminSurface": {
+      "tabId": "messenger",
+      "label": "Messenger",
+      "workspace": "business",
+      "kind": "generic",
+      "keywords": [
+        "messenger",
+        "facebook",
+        "meta",
+        "messaging"
+      ]
+    },
+    "configSchema": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  }
+}

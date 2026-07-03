@@ -1,0 +1,41 @@
+{
+  "name": "@phantasy/plugin-messenger",
+  "version": "0.1.0-beta",
+  "description": "Facebook Messenger integration plugin for Phantasy companions.",
+  "displayName": "Messenger",
+  "main": "./dist/index.js",
+  "workspace": "business",
+  "extensionKind": "integration",
+  "category": "messaging",
+  "tags": [
+    "messenger",
+    "facebook",
+    "meta",
+    "messaging"
+  ],
+  "permissions": [
+    "internet"
+  ],
+  "dependencies": [],
+  "adminSurface": {
+    "tabId": "messenger",
+    "label": "Messenger",
+    "workspace": "business",
+    "kind": "generic",
+    "keywords": [
+      "messenger",
+      "facebook",
+      "meta",
+      "messaging"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  }
+}
