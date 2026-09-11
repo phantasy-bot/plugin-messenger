@@ -1,6 +1,6 @@
 {
   "name": "@phantasy/plugin-messenger",
-  "version": "0.1.0-beta",
+  "version": "0.1.17-beta",
   "description": "Facebook Messenger integration plugin for Phantasy companions.",
   "displayName": "Messenger",
   "main": "./dist/index.js",
